@@ -7,7 +7,7 @@ const SearchBox = (props) => {
                 <section className="col s4 offset-s4">
                     <form action="" onSubmit={props.handleSubmit}>
                         <div className="input-field">
-                            <input type="text" placeholder="Search..." onChange={props.handleChange}/>
+                            <input type="text" placeholder="Search..." onChange={props.handleChange} aria-label="Search movies"/>
                         </div>
                     </form>
                 </section>

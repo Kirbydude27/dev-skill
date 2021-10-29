@@ -8,7 +8,7 @@ const CardList = (props) => {
                 {
                     props.movies.map((movie, i) => {
                         return (
-                            <Card key={i} image={movie.poster_path}/>
+                            <Card key={i} image={movie.poster_path} title={movie.title} overview={movie.overview} release={movie.release_date}/>
                         )
                     })
                 }
