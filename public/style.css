@@ -1,0 +1,38 @@
+.button-as-link {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: var(--normal-font-fam);
+    font-size: 1em;
+}
+
+dt::after {
+    content: ": ";
+}
+
+.movie-title {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.s12 {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+}
+
+.card {
+    width: 200px;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    margin:0!important;
+    position: relative;
+    top: 20%;
+}
