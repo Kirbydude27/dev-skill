@@ -1,4 +1,26 @@
+import React, { useState } from 'react';
+
 const Card = (props) => {
+
+    const [buttonText, setButtonText] = useState('See More');
+
+    const [displayStyle, setDisplayStyle] = useState('none');
+
+    let detailStyle = {
+        display: displayStyle
+    };
+
+    function showCardDetails() {
+        if (displayStyle === 'none') {
+            setDisplayStyle('block');
+            setButtonText('See Less');
+        }
+        else {
+            setDisplayStyle('none');
+            setButtonText('See More');
+        }
+    };
+
     return (
         <div className="col s12 m6 l3">
             <div className="card">
@@ -8,7 +30,12 @@ const Card = (props) => {
                     }
                 </div>
                 <div className = "card-content">
-                    <p><a href="a">See More</a></p>
+                    <h5 className="movie-title">{props.title}</h5>
+                    <p><button className="button-as-link" onClick={showCardDetails}>{buttonText}</button></p>
+                    <div className="details" style={detailStyle}>
+                        <p>{props.overview} </p>
+                        <p>Released on {props.release}</p>
+                    </div>
                 </div>
             </div>
         </div>
